@@ -24,7 +24,7 @@ S = (1/m) * sum (S1 - S2);
 
 thetaSquared = theta .^2;
 
-RS = (lambda /(2*m)) * sum(thetaSquared);
+RS = (lambda /(2*m)) * sum(thetaSquared(2:end));
 
 J = S + RS;
 
@@ -32,7 +32,7 @@ J = S + RS;
 
 errorV = hypothesis - y; % m x 1
 grad = (1/m) * (X' * errorV) ;
-grad(2:end) = grad(2:end) + (lambda / (2*m)) * theta(2:end) ;
+grad(2:end) = grad(2:end) + (lambda / m) * theta(2:end) ;
 
 
 
