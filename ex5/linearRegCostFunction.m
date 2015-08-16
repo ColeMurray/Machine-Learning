@@ -23,6 +23,14 @@ J = (1/(2*m)) * ( h - y ).^2;
 
 J = sum(J) + sum((lambda/(2*m))* (theta(2:end).^2));
 
+% Gradient
+grad = (1/m) * (h-y)'*X;
+theta(1) = 0;
+grad = grad' + (lambda / m ) * theta;
+
+
+
+
 
 
 
