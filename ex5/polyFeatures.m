@@ -15,6 +15,16 @@ X_poly = zeros(numel(X), p);
 %
 % 
 
+p_vec = [1:p];
+%p_vec =  % convert to column
+m = size(X,1);
+for i = 1:m  
+    X_poly(i,:) = X(i) .^ p_vec;
+end
+
+
+
+
 
 
 
