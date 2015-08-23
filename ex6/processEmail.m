@@ -98,8 +98,16 @@ while ~isempty(email_contents)
     %
 
 
-
-
+    % Perform a get on vocabList for 'str'
+    % if val is not null get index of str in vocablist
+    
+    for i =1:length(vocabList)
+        str2 = vocabList{i};
+        if (strcmp(str,str2) == 1)
+            word_indices = [word_indices ; i];
+        end
+    end
+    
 
 
 
